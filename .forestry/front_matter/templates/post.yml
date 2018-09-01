@@ -9,3 +9,9 @@ fields:
 - type: text
   name: title
   label: Title
+- type: textarea
+  name: description
+  label: Description
+- type: datetime
+  label: Date
+  name: date
