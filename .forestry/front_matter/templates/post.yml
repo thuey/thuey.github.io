@@ -1,0 +1,8 @@
+---
+label: Post
+hide_body: false
+is_partial: false
+fields:
+- type: tag_list
+  label: Tags
+  name: tags
