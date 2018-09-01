@@ -15,3 +15,5 @@ fields:
 - type: datetime
   label: Date
   name: date
+pages:
+- _posts/knowledge-nugget-server-side-events-ses.md
