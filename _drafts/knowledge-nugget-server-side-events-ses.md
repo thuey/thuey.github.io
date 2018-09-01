@@ -6,4 +6,4 @@ tags:
 description: ''
 
 ---
-There are a lot of things about HTML5 that are still mysteries to me--things that are spoken about in whispers by the water cooler, but never witnessed in real life. One of these mythical beasts is Server Sent Events, or "SSE" as it is known amongst the indoctrinated. In this Knowledge Nugget, I hope to demystify SSE for myself and others.
+There are a lot of things about HTML5 that are still mysteries to me--things that are spoken about in whispers by the water cooler, but never witnessed in real life. One of these mythical beasts is Server Sent Events, or "SSE" as it is known amongst the indoctrinated. In this Knowledge Nugget, I hope to hunt down this mythical beast and expose it for what it really is.
