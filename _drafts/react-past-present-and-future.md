@@ -55,3 +55,9 @@ Stack Reconciliation (Past)
 
 When something changes (e.g. state is updated), React updates the virtual DOM in a process known as reconciliation. In reconciliation, React calls render on all of the component instances that were affected by the state change. It will then update the virtual DOM with the new render output, computing the diff that was necessary to perform the update. This diff is passed along to react-dom or ReactNative, which updates the UI.  
 ![](https://sg.fiverrcdn.com/photo2s/113265529/original/eb477fc04ea08437021fe754ece30bdbdb6bfc3b.png?1529521868)
+
+The original (React <16) implementation of the reconciliation algorithm is referred to as **stack** reconciliation. It's called stack reconciliation because computing the diff for the entire virtual DOM happens during a single recursive call.
+
+![](https://marmelab.com/images/blog/react-slider-poll/profiling.png)
+
+## The problem with Stack Reconciliation
