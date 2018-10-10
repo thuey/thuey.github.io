@@ -16,4 +16,5 @@ fields:
   label: Date
   name: date
 pages:
+- _posts/react-past-present-and-future.md
 - _posts/knowledge-nugget-server-side-events-ses.md
