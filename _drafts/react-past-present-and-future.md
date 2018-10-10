@@ -5,6 +5,8 @@ tags: []
 description: ''
 
 ---
+## The Virtual ~~DOM~~ (Current)
+
 Here is some basic React with JSX.
 
     const Button = (props) => ({
@@ -45,3 +47,11 @@ Babel will translate this JSX to `React.createElement`'s:
           })
         });
     });
+
+React assembles these elements into a tree structure, also known as the virtual DOM:
+
+## ![](https://llimllib.github.io/pymag-trees/images/figure4.png)  
+Stack Reconciliation (Past)
+
+When something changes (e.g. state is updated), React updates the virtual DOM in a process known as reconciliation. In reconciliation, React calls render on all of the component instances that were affected by the state change. It will then update the virtual DOM with the new render output, computing the diff that was necessary to perform the update. This diff is passed along to react-dom or ReactNative, which updates the UI.  
+![](https://sg.fiverrcdn.com/photo2s/113265529/original/eb477fc04ea08437021fe754ece30bdbdb6bfc3b.png?1529521868)
