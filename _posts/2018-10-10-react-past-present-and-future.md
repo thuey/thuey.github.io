@@ -16,11 +16,11 @@ In order to understand the state of React, it's important to understand how Reac
 Here is some basic React with JSX.
 
     const Button = (props) => ({
-    	<button style={{color: props.color}} />
+        <button style={{color: props.color}} />
     });
     
     const Form = () => ({
-    	<form>
+        <form>
           <Button color="blue" />
         </form>
     });
@@ -28,11 +28,11 @@ Here is some basic React with JSX.
 Babel will translate this JSX to `React.createElement`'s:
 
     const Button = (props) => (
-    	React.createElement({
+        React.createElement({
           'button',
           {
             style: {
-            	color: props.color
+                color: props.color
             }
           },
           null
@@ -40,14 +40,14 @@ Babel will translate this JSX to `React.createElement`'s:
     );
     
     const Form = () => ({
-    	<form>
+        <form>
           <Button color="blue" />
         </form>
         React.createElement({
           'form',
           {},
           React.createElement({
-          	Button,
+            Button,
             { color: 'blue'},
             null
           })
