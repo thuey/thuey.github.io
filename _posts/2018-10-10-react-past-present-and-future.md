@@ -110,21 +110,21 @@ Time Slicing is the term for breaking up the reconciliation process into priorit
 
     class ExampleApplication extends Component {
       componentDidMount() {
-      	this.intervalID = setInterval(this.tick, 1000);
+          this.intervalID = setInterval(this.tick, 1000);
       }
     
       tick() {
-      	ReactDOMFiber.unstable_deferredUpdates(() =>
-      		this.setState(state => ({ seconds: (state.seconds % 10) + 1 }))
-      	);
+          ReactDOMFiber.unstable_deferredUpdates(() =>
+              this.setState(state => ({ seconds: (state.seconds % 10) + 1 }))
+          );
       }
     
       render() {
-      	return (
-      		<div>
-      			{this.state.seconds}
-      		</div>
-      	);
+          return (
+              <div>
+                  {this.state.seconds}
+              </div>
+          );
       }
     }
 
