@@ -149,7 +149,7 @@ The `ErrorBoundary` component can then be used just like any other component:
       <MyWidget />
     </ErrorBoundary>
 
-### Suspense!
+### Suspense
 
 Because reconciling can happen asynchronously, you can tell React to pause rendering a part of the component tree that is waiting for data to come in (e.g. from a network call), while continuing to process the rest of the tree and other high-priority updates. Suspense itself merits its own article, and it is still a highly volatile API. However, suspense will work like this:
 
