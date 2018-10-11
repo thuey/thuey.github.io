@@ -106,7 +106,7 @@ The way Fiber was implemented makes it so components can now return multiple chi
 
 Time Slicing is the term for breaking up the reconciliation process into prioritized bits of work to reduce jank. This feature is still being developed and has a volatile API, but when it's released, it will look something like this:
 
-    class ExampleApplication extends React.Component {
+    class ExampleApplication extends Component {
       componentDidMount() {
       	this.intervalID = setInterval(this.tick, 1000);
       }
@@ -128,9 +128,9 @@ Time Slicing is the term for breaking up the reconciliation process into priorit
 
 ### Error Boundaries
 
-With React Fiber, you can create React Components to handle JavaScript errors, so components can let errors bubble up, instead of trying to handle them themselves. Components that handle errors are called Error Boundaries. This functionality is already available, and looks something like this:
+With React Fiber, you can create React components to handle JavaScript errors. This consolidates error handling in a few select components, instead of scattering error handling throughout the application. Components that handle errors are called Error Boundaries. The ability to create Error Boundary components is already available, and looks like this:
 
-    class ErrorBoundary extends React.Component {
+    class ErrorBoundary extends Component {
       componentDidCatch(error, info) {
         this.setState({ hasError: true });
       }
@@ -160,4 +160,4 @@ Because reconciling can happen asynchronously, you can tell React to pause rende
 
 ## Conclusion
 
-React Fiber 
+Rewriting the reconciliation algorithm was a huge undertaking by the React team; however, there are now so many cool things you can do with React now to improve the user experience. It will be exciting to see what the community comes up with once features like time slicing and suspense are officially released!
