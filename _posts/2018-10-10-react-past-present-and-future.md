@@ -70,8 +70,9 @@ The original (React <16) implementation of the reconciliation algorithm is refer
 
 ## The problem with Stack Reconciliation
 
-![](https://developers.google.com/web/updates/images/inside-browser/part3/pagejank2.png)Most screens refresh at 60 fps. If reconciliation and updating the browser window don't complete in between frames, it results in page jank. The nice people over at React put together [this demo](https://claudiopro.github.io/react-fiber-vs-stack-demo/stack.html) to see the jank in action:
+![](https://developers.google.com/web/updates/images/inside-browser/part3/pagejank2.png)
 
+Most screens refresh at 60 fps. If reconciliation and updating the browser window don't complete in between frames, it results in page jank. The nice people over at React put together [this demo](https://claudiopro.github.io/react-fiber-vs-stack-demo/stack.html) to see the jank in action:
 ![](/uploads/jank.gif)
 
 ## Fiber to the Rescue!
