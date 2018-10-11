@@ -57,7 +57,7 @@ React assembles these elements into a tree structure, also known as the virtual 
 ### ![](https://llimllib.github.io/pymag-trees/images/figure4.png)  
 Reconciliation
 
-When something changes (e.g. state is updated), React updates the virtual DOM in a process known as reconciliation. In reconciliation, React calls render on all of the component instances that were affected by the state change. It will then update the virtual DOM with the new render output, computing the diff that was necessary to perform the update. This diff is passed along to react-dom or ReactNative, which updates the UI.  
+When something changes (e.g. state is updated), React updates the virtual DOM in a process known as reconciliation. In reconciliation, React calls render on all of the component instances that were affected by the state change. It will then update the virtual DOM with the new render output, computing the diff that was necessary to perform the update along the way. This diff is then passed along to the renderer (most likely react-dom or ReactNative), which updates the UI.  
 ![](https://sg.fiverrcdn.com/photo2s/113265529/original/eb477fc04ea08437021fe754ece30bdbdb6bfc3b.png?1529521868)
 
 ## Stack Reconciliation
@@ -74,7 +74,7 @@ The original (React <16) implementation of the reconciliation algorithm is refer
 
 ## Fiber to the Rescue!
 
-In React 16, the React team introduced a new reconciliation algorithm called Fiber. With Fiber, reconciliation can be broken up into smaller units of work known as "fibers." These fibers are scheduled in a way to allow other updates, like animations, to occur in the middle of the reconciliation process, thus mitigating page jank. Check out the difference in the call stacks between Fiber (top) and Stack (bottom) reconciliation.
+In React 16, the React team introduced a new reconciliation algorithm called Fiber. With Fiber, reconciliation can be broken up into smaller units of work known as "fibers." These fibers are scheduled in a way to allow other updates, like animations, to occur in the middle of the reconciliation process, thus mitigating page jank. Check out the difference in the call stacks between Fiber reconciliation (top) and Stack reconciliation (bottom).
 
 ![](https://s3.eu-west-2.amazonaws.com/websitegiamir/triangles-demo-with-time-slicing.png)
 
