@@ -2,9 +2,11 @@
 title: 'React: Past, Present, and Future'
 date: 2018-10-10 00:00:00 +0000
 tags: []
-description: ''
+description: What does the future of React look like? tldr; It's very bright, my friends.
 
 ---
+What does the future of React look like? tldr; It's very bright, my friends.
+
 ## How React Works
 
 In order to understand the state of React, it's important to understand how React works, at least at a high level. The secret sauce in React is its ability to translate what is returned from your Component's render function into UI updates. It pulls off this tom foolery by using its virtual representation of the UI and reconciliation algorithm to determine what needs to happen in order to make the UI look like the render function says it should.
