@@ -1,7 +1,6 @@
 ---
 label: Post
 hide_body: false
-is_partial: false
 fields:
 - type: tag_list
   label: Tags
@@ -16,5 +15,4 @@ fields:
   label: Date
   name: date
 pages:
-- _posts/2018-10-10-react-past-present-and-future.md
-- _posts/knowledge-nugget-server-side-events-ses.md
+- _posts/react-render-props.md
